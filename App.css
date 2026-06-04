@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f5f9ff;
+  color: #222;
+}
+
+.navbar {
+  background: white;
+  padding: 18px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar h2 {
+  color: #0077cc;
+}
+
+.navbar a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #0077cc;
+}
+
+.hero {
+  min-height: 80vh;
+  padding: 40px 8%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 30px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  color: #063b63;
+}
+
+.hero p {
+  margin: 20px 0;
+  font-size: 18px;
+  color: #555;
+}
+
+.hero img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background: #0077cc;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #005fa3;
+}
+
+.section {
+  padding: 60px 8%;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 35px;
+  font-size: 34px;
+  color: #063b63;
+}
+
+.doctor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.doctor-card {
+  background: white;
+  padding: 25px;
+  text-align: center;
+  border-radius: 18px;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+}
+
+.doctor-card img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.doctor-card h3 {
+  margin: 15px 0 8px;
+}
+
+.doctor-card p {
+  margin: 8px 0;
+  color: #555;
+}
+
+.booking-section {
+  background: #eaf5ff;
+}
+
+.booking-form {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+}
+
+.booking-form textarea {
+  height: 100px;
+  resize: none;
+}
+
+.appointment-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.appointment-card {
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+}
+
+.appointment-card p {
+  margin: 8px 0;
+}
+
+.cancel-btn {
+  background: crimson;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.empty {
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+}
+
+footer {
+  background: #063b63;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .doctor-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .appointment-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .navbar a {
+    margin: 8px;
+    font-size: 14px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .doctor-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 40px 5%;
+  }
+}
